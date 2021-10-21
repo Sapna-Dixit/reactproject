@@ -2,8 +2,8 @@ import React from 'react'
 
 const Error = () =>{
     return(
-        <div>
-            <h3>Error</h3>
+        <div className = "error_page">
+            <h1>!Oops Page not Found</h1>
         </div>
     )
 };

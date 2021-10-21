@@ -25,7 +25,7 @@ const Empdata = ({ employee }) =>{
     let actualDate = `${newDate1} ${currMonth}`
     return  employee.map(({id, name, dob, age, gender, image})=>{
         let empDOB = dob;
-        if(empDOB == actualDate)
+        if(empDOB === actualDate)
         {
             return(
                 <div key = {id} className ="person">

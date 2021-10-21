@@ -1,10 +1,19 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-const Empbirthday = ()=>{
-    return(
-        <div>
-            <h3>Empbirthday</h3>
+import data from '../components/data.js'
+import Empdata from './Empdata';
+
+
+const Empdetails = () => {
+    return (
+        <div className="container">
+        <h3>Today Birthday</h3>
+        <Empdata employee={data} />
+        <Link to="/empdetails"> Today Birthday</Link>
+            
         </div>
     )
-};
-export default Empbirthday;
+}
+
+export default Empdetails;
