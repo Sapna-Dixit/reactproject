@@ -14,12 +14,31 @@ const  todoReducer = (state = initialState, action) =>{
                     ...state.list,
                     {
                         id:id,
-                        data:data
+                        data:data,
+                        
                     }
             ]}
+        case "DELETE_TODO":
+            const newList = state.list.filter((elem)=> elem.id!=action.id)
+             return{
+                 ...state,
+                 list : newList
+             }
+        
+        case "REMOVE_ALL" :
+            return {
+                ...state,
+                list : []
+            }
+        // case "SEARCH_TODO" :
+        //     const reqItem = state.list.filter((elem)=>elem.id === action.id)
+        //     return {
+        //         ...state
+        //     }
         default :
          return state;
     }
 
+    
 }
 export default todoReducer;

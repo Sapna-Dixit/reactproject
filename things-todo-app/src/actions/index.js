@@ -3,13 +3,22 @@ export const addTodo = (data) =>{
         type:"ADD_TODO",
         payload : {
             id : new Date().getTime().toString(),
-            data : data
+            data : data,
+            completed: false
         }
     }
 }
 
-export const deleteTodo = () =>{
+export const deleteTodo = (id) =>{
     return {
-        type : "DELETE_TODO"
+        type : "DELETE_TODO",
+        id
+    }
+}
+
+export  const removeAll = ()=>{
+    return{
+        type: "REMOVE_ALL",
+       
     }
 }
